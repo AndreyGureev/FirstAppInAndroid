@@ -4,15 +4,143 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="@dimen/common_spacing_16dp">
 
-    <TextView
+    <ImageView
+        android:id="@+id/avatarView"
+        android:layout_width="@dimen/post_avatar_size_48dp"
+        android:layout_height="@dimen/post_avatar_size_48dp"
+        android:contentDescription="@string/avatar_description"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/authorView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing_16dp"
+        android:layout_marginEnd="@dimen/common_spacing_8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/author"
+        app:layout_constraintBottom_toTopOf="@id/publishedView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/menu"
+        app:layout_constraintStart_toEndOf="@+id/avatarView"
+        app:layout_constraintTop_toTopOf="@id/avatarView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/publishedView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/published"
+        app:layout_constraintBottom_toBottomOf="@id/avatarView"
+        app:layout_constraintEnd_toEndOf="@id/authorView"
+        app:layout_constraintStart_toStartOf="@id/authorView"
+        app:layout_constraintTop_toBottomOf="@id/authorView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numberOfLikesView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing_8dp"
+        android:layout_marginTop="@dimen/common_spacing_16dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/numberOfLikes"
+        app:layout_constraintStart_toEndOf="@id/likes"
+        app:layout_constraintTop_toBottomOf="@id/contentView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numberOfSharedView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing_8dp"
+        android:layout_marginTop="@dimen/common_spacing_16dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/numberOfShared"
+        app:layout_constraintStart_toEndOf="@id/shared"
+        app:layout_constraintTop_toBottomOf="@id/contentView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numberOfOverlooked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/greeting"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="@dimen/common_spacing_8dp"
+        android:layout_marginTop="@dimen/common_spacing_16dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/numberOfOverlooked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentView" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/post_menu"
+        android:src="@drawable/ic_baseline_more_vert_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing_16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_favorite_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentView" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/shared"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing_16dp"
+        android:layout_marginTop="@dimen/common_spacing_16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_share_24dp"
+        app:layout_constraintStart_toEndOf="@id/numberOfLikesView"
+        app:layout_constraintTop_toBottomOf="@id/contentView" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/overlooked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing_16dp"
+        android:layout_marginEnd="@dimen/common_spacing_8dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_remove_red_eye_24dp"
+        app:layout_constraintEnd_toStartOf="@id/numberOfOverlooked"
+        app:layout_constraintTop_toBottomOf="@id/contentView" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierTop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="avatarView, publishedView, menu" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierBottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="contentView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:autoLink="web"
+        android:text="@string/content"
+        app:layout_constraintTop_toBottomOf="@id/barrierTop"
+        tools:text="@tools:sample/lorem/random" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
