@@ -6,7 +6,6 @@ import ru.netology.nmedia.dto.NumberEditor.numberEditing
 import ru.netology.nmedia.dto.Post
 
 class PostRepositoryInMemoryImpl : PostRepository {
-
     private var post = Post(
         id = 1,
         author = "Нетология. Университет интернет - профессий будущего",
