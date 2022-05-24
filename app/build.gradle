@@ -40,9 +40,11 @@ android {
 dependencies {
     def arch_version = "2.1.0"
     def lifecycle_version = "2.4.1"
+    def recyclerview_version = "1.2.1"
+
     apply plugin:'kotlin-kapt'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation 'androidx.activity:activity-ktx:1.4.0'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
