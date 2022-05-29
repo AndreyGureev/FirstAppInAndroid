@@ -43,17 +43,11 @@ class PostViewHolder(
             authorView.text = post.author
             contentView.text = post.content
             publishedView.text = post.published
-            numberOfLikesView.text = NumberEditor.numberEditing(post.numberOfLikesToInt)
-            numberOfSharedView.text = NumberEditor.numberEditing(post.numberOfSharedToInt)
-            numberOfOverlookedView.text = NumberEditor.numberEditing(post.numberOfOverlookedToInt)
+            likes.text = NumberEditor.numberEditing(post.numberOfLikesToInt)
+            shared.text = NumberEditor.numberEditing(post.numberOfSharedToInt)
+            overlooked.text = NumberEditor.numberEditing(post.numberOfOverlookedToInt)
 
-            likes.setImageResource(
-                if (post.likedByMe) {
-                    R.drawable.ic_baseline_favorite_like_24dp
-                } else {
-                    R.drawable.ic_baseline_favorite_dislike_24dp
-                }
-            )
+            likes.isChecked = post.likedByMe
 
             likes.setOnClickListener {
                 onInteractionListener.onLike(post)

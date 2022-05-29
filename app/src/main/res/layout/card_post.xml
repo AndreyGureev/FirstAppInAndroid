@@ -43,83 +43,55 @@
         app:layout_constraintStart_toStartOf="@id/authorView"
         app:layout_constraintTop_toBottomOf="@id/authorView" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/numberOfLikesView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/common_spacing_8dp"
-        android:layout_marginTop="@dimen/common_spacing_16dp"
-        android:ellipsize="end"
-        android:singleLine="true"
-        android:text="@string/numberOfLikes"
-        app:layout_constraintStart_toEndOf="@id/likes"
-        app:layout_constraintTop_toBottomOf="@id/contentView" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/numberOfSharedView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/common_spacing_8dp"
-        android:layout_marginTop="@dimen/common_spacing_16dp"
-        android:ellipsize="end"
-        android:singleLine="true"
-        android:text="@string/numberOfShared"
-        app:layout_constraintStart_toEndOf="@id/shared"
-        app:layout_constraintTop_toBottomOf="@id/contentView" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/numberOfOverlookedView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/common_spacing_8dp"
-        android:layout_marginTop="@dimen/common_spacing_16dp"
-        android:ellipsize="end"
-        android:singleLine="true"
-        android:text="@string/numberOfOverlooked"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contentView" />
-
-    <androidx.appcompat.widget.AppCompatImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/menuPostView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="36dp"
+        android:layout_height="43dp"
         android:contentDescription="@string/post_menu"
-        android:src="@drawable/ic_baseline_more_vert_24dp"
+        app:icon="@drawable/ic_baseline_more_vert_24dp"
+        app:iconTint="@color/colorMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/likes"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_spacing_16dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_favorite_like_24dp"
+        android:checkable="true"
+        android:textColor="@color/purple_500"
+        android:textColorHighlight="?android:attr/textColorHighlightInverse"
+        app:icon="@drawable/ic_baseline_favorite_like_24dp"
+        app:iconTint="@color/colorLiked"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contentView" />
+        app:layout_constraintTop_toBottomOf="@id/contentView"
+        tools:text="100500" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/shared"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_spacing_16dp"
-        android:layout_marginTop="@dimen/common_spacing_16dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_share_24dp"
-        app:layout_constraintStart_toEndOf="@id/numberOfLikesView"
-        app:layout_constraintTop_toBottomOf="@id/contentView" />
+        android:textColorHighlight="?android:attr/textColorHighlightInverse"
+        app:icon="@drawable/ic_baseline_share_24dp"
+        app:iconTint="@color/colorShared"
+        app:layout_constraintStart_toEndOf="@id/likes"
+        app:layout_constraintTop_toBottomOf="@id/contentView"
+        tools:text="100500" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/overlooked"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/common_spacing_16dp"
-        android:layout_marginEnd="@dimen/common_spacing_8dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_baseline_remove_red_eye_24dp"
-        app:layout_constraintEnd_toStartOf="@id/numberOfOverlookedView"
-        app:layout_constraintTop_toBottomOf="@id/contentView" />
+        android:textColorHighlight="?android:attr/textColorHighlightInverse"
+        app:icon="@drawable/ic_baseline_remove_red_eye_24dp"
+        app:iconTint="@color/colorOverlooked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentView"
+        tools:text="109345" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierTop"
