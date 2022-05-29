@@ -60,6 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checkable="true"
+        android:button="@color/ic_like_selector"
         android:textColor="@color/purple_500"
         android:textColorHighlight="?android:attr/textColorHighlightInverse"
         app:icon="@drawable/ic_baseline_favorite_like_24dp"
