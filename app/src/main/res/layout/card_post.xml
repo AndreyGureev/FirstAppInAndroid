@@ -56,13 +56,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/likes"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checkable="true"
+        style="@style/OurButtons"
         android:button="@color/ic_like_selector"
+        android:checkable="true"
         android:textColor="@color/purple_500"
-        android:textColorHighlight="?android:attr/textColorHighlightInverse"
         app:icon="@drawable/ic_baseline_favorite_like_24dp"
         app:iconTint="@color/colorLiked"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,11 +68,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/shared"
-        style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/common_spacing_16dp"
-        android:textColorHighlight="?android:attr/textColorHighlightInverse"
+        style="@style/OurButtons"
         app:icon="@drawable/ic_baseline_share_24dp"
         app:iconTint="@color/colorShared"
         app:layout_constraintStart_toEndOf="@id/likes"
@@ -83,16 +76,24 @@
         tools:text="100500" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/overlooked"
+        android:id="@+id/addVideo"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColorHighlight="?android:attr/textColorHighlightInverse"
+        android:visibility="invisible"
+        app:icon="@drawable/ic_baseline_video_file_24dp"
+        app:iconTint="@color/ic_shared_tint"
+        app:layout_constraintStart_toEndOf="@id/shared"
+        app:layout_constraintTop_toBottomOf="@id/barrierBottom" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/overlooked"
+        style="@style/OurButtons"
         app:icon="@drawable/ic_baseline_remove_red_eye_24dp"
         app:iconTint="@color/colorOverlooked"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/contentView"
-        tools:text="109345" />
+        tools:text="16732" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierTop"

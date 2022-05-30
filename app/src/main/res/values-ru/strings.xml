@@ -15,4 +15,9 @@
     <string name="post_text" translatable="false">Опубликовать пост</string>
     <string name="ok" translatable="false">Хорошо</string>
     <string name="cancel" translatable="false">Отмена</string>
+    <string name="add_post" translatable="false">Добавить пост</string>
+    <string name="save_post" translatable="false">Сохранить пост</string>
+    <string name="app_not_found_error" translatable="false">Приложение не найдено</string>
+    <string name="video_image" translatable="false">Видеоизображение</string>
+    <string name="play_video_netology" translatable="false">Воспроизведение видео Нетологии</string>
 </resources>

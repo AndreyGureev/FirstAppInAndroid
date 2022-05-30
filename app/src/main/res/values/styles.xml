@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FirstAppInAndroid" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorAccent">@color/teal_200</item>
+
+    </style>
+
+
+    <style name="OurButtons" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width" > wrap_content</item>
+        <item name="android:layout_height" > wrap_content</item>
+        <item name="android:textColorHighlight" >?android:attr/textColorHighlightInverse</item>
+    </style>
+</resources>

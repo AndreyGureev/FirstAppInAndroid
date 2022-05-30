@@ -15,4 +15,9 @@
     <string name="post_text" translatable="false">Publish a post</string>
     <string name="ok" translatable="false">OK</string>
     <string name="cancel" translatable="false">Cancel</string>
+    <string name="add_post" translatable="false">Add Post</string>
+    <string name="save_post" translatable="false">Save Post</string>
+    <string name="app_not_found_error" translatable="false">App not found</string>
+    <string name="video_image" translatable="false">Video image</string>
+    <string name="play_video_netology" translatable="false">Play video Netology</string>
 </resources>
