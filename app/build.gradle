@@ -44,6 +44,7 @@ dependencies {
     def recyclerview_version = "1.2.1"
 
     apply plugin:'kotlin-kapt'
+    implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation 'androidx.activity:activity-ktx:1.4.0'
