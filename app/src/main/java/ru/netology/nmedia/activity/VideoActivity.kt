@@ -7,6 +7,7 @@ import android.os.Bundle
 import ru.netology.nmedia.databinding.ActivityVideoBinding
 
 class VideoActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityVideoBinding.inflate(layoutInflater)

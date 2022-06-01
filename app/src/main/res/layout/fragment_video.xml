@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:scrollbarSize="16dp"
-    tools:context=".activity.VideoActivity">
+    tools:context=".activity.VideoFragment">
 
     <ImageButton
         android:contentDescription="@string/video_image"

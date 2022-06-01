@@ -12,11 +12,12 @@
     <string name="content" translatable="false">Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам: от новичков до уверенных профессионалов.Но самое важное остаётся с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия — помочь встать на путь роста и начать цепочку перемен - http://netolo.gy/fyb</string>
     <string name="edit_post" translatable="false">Редактировать</string>
     <string name="remove_post" translatable="false">Удалить</string>
-    <string name="post_text" translatable="false">Опубликовать пост</string>
+    <string name="publish_text" translatable="false">Опубликовать пост</string>
     <string name="ok" translatable="false">Хорошо</string>
     <string name="cancel" translatable="false">Отмена</string>
     <string name="add_post" translatable="false">Добавить пост</string>
     <string name="save_post" translatable="false">Сохранить пост</string>
+    <string name="chooser_share_post" translatable="false">Поделиться постом</string>
     <string name="app_not_found_error" translatable="false">Приложение не найдено</string>
     <string name="video_image" translatable="false">Видеоизображение</string>
     <string name="play_video_netology" translatable="false">Воспроизведение видео Нетологии</string>

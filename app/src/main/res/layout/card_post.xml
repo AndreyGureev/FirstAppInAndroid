@@ -2,27 +2,26 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/common_spacing_16dp"
-    tools:context=".activity.MainActivity">
+    android:layout_width="match_parent"
+    android:padding="@dimen/common_spacing_16dp">
 
     <ImageView
-        android:id="@+id/avatarView"
-        android:layout_width="@dimen/post_avatar_size_48dp"
-        android:layout_height="@dimen/post_avatar_size_48dp"
         android:contentDescription="@string/avatar_description"
+        android:id="@+id/avatarView"
+        android:layout_height="@dimen/post_avatar_size_48dp"
+        android:layout_width="@dimen/post_avatar_size_48dp"
         android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/authorView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/common_spacing_16dp"
-        android:layout_marginEnd="@dimen/common_spacing_8dp"
         android:ellipsize="end"
+        android:id="@+id/authorView"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_spacing_8dp"
+        android:layout_marginStart="@dimen/common_spacing_16dp"
+        android:layout_width="0dp"
         android:singleLine="true"
         android:text="@string/author"
         app:layout_constraintBottom_toTopOf="@id/publishedView"
@@ -32,10 +31,10 @@
         app:layout_constraintTop_toTopOf="@id/avatarView" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/publishedView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:ellipsize="end"
+        android:id="@+id/publishedView"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
         android:singleLine="true"
         android:text="@string/published"
         app:layout_constraintBottom_toBottomOf="@id/avatarView"
@@ -44,21 +43,22 @@
         app:layout_constraintTop_toBottomOf="@id/authorView" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/menuPostView"
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="36dp"
-        android:layout_height="43dp"
         android:contentDescription="@string/post_menu"
+        android:id="@+id/menuPostView"
+        android:layout_height="43dp"
+        android:layout_width="36dp"
         app:icon="@drawable/ic_baseline_more_vert_24dp"
         app:iconTint="@color/colorMenu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/likes"
         style="@style/OurButtons"
         android:button="@color/ic_like_selector"
         android:checkable="true"
+        android:id="@+id/likes"
         android:textColor="@color/purple_500"
         app:icon="@drawable/ic_baseline_favorite_like_24dp"
         app:iconTint="@color/colorLiked"
@@ -67,8 +67,8 @@
         tools:text="100500" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/shared"
         style="@style/OurButtons"
+        android:id="@+id/shared"
         app:icon="@drawable/ic_baseline_share_24dp"
         app:iconTint="@color/colorShared"
         app:layout_constraintStart_toEndOf="@id/likes"
@@ -76,10 +76,10 @@
         tools:text="100500" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/addVideo"
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/addVideo"
         android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
         android:visibility="invisible"
         app:icon="@drawable/ic_baseline_video_file_24dp"
         app:iconTint="@color/ic_shared_tint"
@@ -87,8 +87,8 @@
         app:layout_constraintTop_toBottomOf="@id/barrierBottom" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/overlooked"
         style="@style/OurButtons"
+        android:id="@+id/overlooked"
         app:icon="@drawable/ic_baseline_remove_red_eye_24dp"
         app:iconTint="@color/colorOverlooked"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,23 +97,23 @@
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierTop"
-        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_width="0dp"
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="avatarView, publishedView, menuPostView" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierBottom"
-        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_width="0dp"
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="contentView" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/contentView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
         android:autoLink="web"
+        android:id="@+id/contentView"
+        android:layout_height="300dp"
+        android:layout_width="match_parent"
         android:text="@string/content"
         app:layout_constraintTop_toBottomOf="@id/barrierTop"
         tools:text="@tools:sample/lorem/random" />

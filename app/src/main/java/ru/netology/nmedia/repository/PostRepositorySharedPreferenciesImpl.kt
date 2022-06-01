@@ -8,7 +8,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import ru.netology.nmedia.dto.Post
 
-class PostRepositoryInMemoryImpl(context: Context) : PostRepository {
+class PostRepositorySharedPreferenciesImpl(context: Context) : PostRepository {
 
     private companion object {
         const val POST_FILE = "posts.json"
