@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstAppInAndroid">
-        <activity android:name=".activity.VideoFragment" />
         <activity
             android:exported="true"
             android:name=".activity.AppActivity">
