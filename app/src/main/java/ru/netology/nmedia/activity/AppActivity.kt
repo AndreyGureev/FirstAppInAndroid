@@ -3,17 +3,13 @@ package ru.netology.nmedia.activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_INDEFINITE
-import com.google.android.material.snackbar.Snackbar
+import androidx.navigation.findNavController
 import ru.netology.nmedia.R
-import ru.netology.nmedia.databinding.ActivityAppBinding
+import ru.netology.nmedia.activity.NewPostFragment.Companion.textArg
 
-class AppActivity : AppCompatActivity() {
-
+class AppActivity : AppCompatActivity(R.layout.activity_app) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityAppBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         intent?.let {
             if (it.action != Intent.ACTION_SEND) {
@@ -21,22 +17,30 @@ class AppActivity : AppCompatActivity() {
             }
 
             val text = it.getStringExtra(Intent.EXTRA_TEXT)
-            if (!text.isNullOrBlank()) {
-                Snackbar.make(binding.root, "Контент не может быть пустым", LENGTH_INDEFINITE)
-                    .setAction(R.string.publish_text) {
-                        finish()
-                    }
-                    .show()
+            if (text?.isNotBlank() != true) {
                 return@let
             }
-
-//            intent.removeExtra(Intent.EXTRA_TEXT)
-//            findNavController(R.id.nav_host_fragment).navigate(
-//                R.id.action_feedFragment_to_newPostFragment,
-//                Bundle().apply {
-//                    textArg = text
-//                }
-//            )
+            intent.removeExtra(Intent.EXTRA_TEXT)
+            findNavController(R.id.nav_host_fragment).navigate(
+                R.id.action_mainFragment_to_newPostFragment,
+                Bundle().apply {
+                    textArg = text
+                }
+            )
+            intent.removeExtra(Intent.EXTRA_TEXT)
+            findNavController(R.id.nav_host_fragment).navigate(
+                R.id.action_mainFragment_to_editPostFragment,
+                Bundle().apply {
+                    textArg = text
+                }
+            )
+            intent.removeExtra(Intent.EXTRA_TEXT)
+            findNavController(R.id.nav_host_fragment).navigate(
+                R.id.action_mainFragment_to_postCardFragment,
+                Bundle().apply {
+                    textArg = text
+                }
+            )
         }
     }
 }

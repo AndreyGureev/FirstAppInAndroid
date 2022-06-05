@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:padding="@dimen/common_spacing_16dp">
+    android:padding="@dimen/common_spacing_16dp"
+    tools:context=".activity.MainFragment">
 
     <ImageView
         android:contentDescription="@string/avatar_description"
-        android:id="@+id/avatarView"
+        android:id="@+id/avatar"
         android:layout_height="@dimen/post_avatar_size_48dp"
         android:layout_width="@dimen/post_avatar_size_48dp"
         android:src="@drawable/ic_launcher_foreground"
@@ -17,39 +18,39 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:ellipsize="end"
-        android:id="@+id/authorView"
+        android:id="@+id/author"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/common_spacing_8dp"
         android:layout_marginStart="@dimen/common_spacing_16dp"
         android:layout_width="0dp"
         android:singleLine="true"
         android:text="@string/author"
-        app:layout_constraintBottom_toTopOf="@id/publishedView"
+        app:layout_constraintBottom_toTopOf="@id/published"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/menuPostView"
-        app:layout_constraintStart_toEndOf="@+id/avatarView"
-        app:layout_constraintTop_toTopOf="@id/avatarView" />
+        app:layout_constraintEnd_toStartOf="@id/menuPost"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@id/avatar" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:ellipsize="end"
-        android:id="@+id/publishedView"
+        android:id="@+id/published"
         android:layout_height="wrap_content"
         android:layout_width="0dp"
         android:singleLine="true"
         android:text="@string/published"
-        app:layout_constraintBottom_toBottomOf="@id/avatarView"
-        app:layout_constraintEnd_toEndOf="@id/authorView"
-        app:layout_constraintStart_toStartOf="@id/authorView"
-        app:layout_constraintTop_toBottomOf="@id/authorView" />
+        app:layout_constraintBottom_toBottomOf="@id/avatar"
+        app:layout_constraintEnd_toEndOf="@id/author"
+        app:layout_constraintStart_toStartOf="@id/author"
+        app:layout_constraintTop_toBottomOf="@id/author" />
 
     <com.google.android.material.button.MaterialButton
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:contentDescription="@string/post_menu"
-        android:id="@+id/menuPostView"
+        android:id="@+id/menuPost"
         android:layout_height="43dp"
         android:layout_width="36dp"
         app:icon="@drawable/ic_baseline_more_vert_24dp"
-        app:iconTint="@color/colorMenu"
+        app:iconTint="@color/colorDarkGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
@@ -63,24 +64,24 @@
         app:icon="@drawable/ic_baseline_favorite_like_24dp"
         app:iconTint="@color/colorLiked"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contentView"
+        app:layout_constraintTop_toBottomOf="@id/content"
         tools:text="100500" />
 
     <com.google.android.material.button.MaterialButton
         style="@style/OurButtons"
         android:id="@+id/shared"
         app:icon="@drawable/ic_baseline_share_24dp"
-        app:iconTint="@color/colorShared"
+        app:iconTint="@color/colorDarkGrey"
         app:layout_constraintStart_toEndOf="@id/likes"
-        app:layout_constraintTop_toBottomOf="@id/contentView"
+        app:layout_constraintTop_toBottomOf="@id/content"
         tools:text="100500" />
 
     <com.google.android.material.button.MaterialButton
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:id="@+id/addVideo"
+        android:id="@+id/postVideo"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:icon="@drawable/ic_baseline_video_file_24dp"
         app:iconTint="@color/ic_shared_tint"
         app:layout_constraintStart_toEndOf="@id/shared"
@@ -90,9 +91,9 @@
         style="@style/OurButtons"
         android:id="@+id/overlooked"
         app:icon="@drawable/ic_baseline_remove_red_eye_24dp"
-        app:iconTint="@color/colorOverlooked"
+        app:iconTint="@color/colorDarkGrey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contentView"
+        app:layout_constraintTop_toBottomOf="@id/content"
         tools:text="16732" />
 
     <androidx.constraintlayout.widget.Barrier
@@ -100,18 +101,18 @@
         android:layout_height="0dp"
         android:layout_width="0dp"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="avatarView, publishedView, menuPostView" />
+        app:constraint_referenced_ids="avatar, published, menuPost" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierBottom"
         android:layout_height="0dp"
         android:layout_width="0dp"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="contentView" />
+        app:constraint_referenced_ids="content" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:autoLink="web"
-        android:id="@+id/contentView"
+        android:id="@+id/content"
         android:layout_height="300dp"
         android:layout_width="match_parent"
         android:text="@string/content"

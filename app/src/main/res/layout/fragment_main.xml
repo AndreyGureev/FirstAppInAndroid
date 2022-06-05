@@ -4,26 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".activity.FeedFragment">
+    tools:context=".activity.MainFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listPostFeed"
-        android:layout_height="0dp"
+        android:id="@+id/rvPosts"
         android:layout_width="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/card_post" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:listitem="@layout/fragment_post_card" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:contentDescription="@string/add_post"
-        android:id="@+id/addPost"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/common_spacing_32dp"
+        android:id="@+id/fab_add_new_post"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_spacing_16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@string/add_post"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_add_24dp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:srcCompat="@drawable/ic_baseline_check_24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

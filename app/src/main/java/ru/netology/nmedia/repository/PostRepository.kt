@@ -9,6 +9,7 @@ interface PostRepository {
     fun shareById(id: Long)
     fun overlookById(id: Long)
     fun removeById(id: Long)
-    fun save(post: Post)
+    fun addPost(post: Post)
     fun addVideoById (id: Long)
+    fun findPostById(id: Long): Post
 }

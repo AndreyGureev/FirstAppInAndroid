@@ -1,33 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/common_spacing_16dp"
     tools:context=".activity.NewPostFragment">
 
     <EditText
+        android:id="@+id/etInputArea"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:autofillHints="false"
         android:background="@android:color/transparent"
         android:gravity="start|top"
-        android:id="@+id/editPost"
         android:inputType="textMultiLine"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        tools:ignore="Autofill,LabelFor" />
+        android:padding="@dimen/common_spacing_16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-        android:id="@+id/bottomAppBar"
-        android:layout_gravity="bottom"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etPostVideoLink"
+        style="@style/LargeTextStyle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent" />
+        android:layout_marginEnd="@dimen/common_spacing_16dp"
+        android:layout_marginRight="@dimen/common_spacing_16dp"
+        android:layout_marginBottom="@dimen/common_spacing_16dp"
+        android:autofillHints="@android:string/copyUrl"
+        android:background="@drawable/edit_text_style"
+        android:hint="@string/enter_video_link"
+        android:inputType="textUri"
+        android:padding="@dimen/common_spacing_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabConfirmation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fabConfirmation"
+        app:layout_dodgeInsetEdges="bottom" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:contentDescription="@string/save_post"
-        android:id="@+id/savePost"
-        android:layout_height="wrap_content"
+        android:id="@+id/fabConfirmation"
         android:layout_width="wrap_content"
-        app:layout_anchor="@id/bottomAppBar"
-        app:srcCompat="@drawable/ic_baseline_check_24dp" />
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_spacing_16dp"
+        android:contentDescription="@string/enter_confirmation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_done_24dp" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,11 +7,12 @@ import kotlinx.parcelize.Parcelize
 
 data class Post(
     val id: Long,
-    val author: String,
+    val avatar: Int,
+    val author: String?,
     val content: String,
     val published: String,
     val likedByMe: Boolean,
-    val video: String,
+    val video: String?,
     val numberOfSharedToInt: Long,
     val numberOfLikesToInt: Long,
     val numberOfOverlookedToInt: Long

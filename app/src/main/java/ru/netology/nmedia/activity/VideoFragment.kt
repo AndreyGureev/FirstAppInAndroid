@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import ru.netology.nmedia.databinding.FragmentVideoBinding
 
 class VideoFragment : Fragment() {
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
