@@ -7,13 +7,12 @@ import kotlinx.parcelize.Parcelize
 
 data class Post(
     val id: Long,
-    val avatar: Int,
     val author: String?,
     val content: String,
     val published: String,
     val likedByMe: Boolean,
     val video: String?,
-    val numberOfSharedToInt: Long,
-    val numberOfLikesToInt: Long,
-    val numberOfOverlookedToInt: Long
+    val numberOfSharedToInt: Int,
+    val numberOfLikesToInt: Int,
+    val numberOfOverlookedToInt: Int
 ) : Parcelable

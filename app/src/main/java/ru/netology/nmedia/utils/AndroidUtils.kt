@@ -18,7 +18,7 @@ import kotlin.reflect.KProperty
 class AndroidUtils {
     companion object {
         val FILE_STORE = "nmedia_posts.json"
-        fun counter(count: Long): String {
+        fun counter(count: Int): String {
             return when (count) {
                 in 0..999 -> count.toString()
                 in 1000..1099 -> String.format("%d", count / 1000) + "K"
@@ -44,7 +44,8 @@ class AndroidUtils {
         }
 
         fun urlValidChecker(link: String): Boolean {
-            return Patterns.WEB_URL.matcher(link).matches()
+            val videoLink = link.trim()
+            return Patterns.WEB_URL.matcher(videoLink).matches()
         }
 
         fun startIntent(context: Context, @Nullable intent: Intent?): Boolean {
