@@ -8,8 +8,8 @@
     tools:context=".activity.MainFragment">
 
     <ImageView
-        android:contentDescription="@string/avatar_description"
         android:id="@+id/avatar"
+        android:contentDescription="@string/avatar_description"
         android:layout_height="@dimen/post_avatar_size_48dp"
         android:layout_width="@dimen/post_avatar_size_48dp"
         android:src="@drawable/ic_launcher_foreground"
@@ -17,8 +17,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:ellipsize="end"
         android:id="@+id/author"
+        android:ellipsize="end"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/common_spacing_8dp"
         android:layout_marginStart="@dimen/common_spacing_16dp"
@@ -32,8 +32,8 @@
         app:layout_constraintTop_toTopOf="@id/avatar" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:ellipsize="end"
         android:id="@+id/published"
+        android:ellipsize="end"
         android:layout_height="wrap_content"
         android:layout_width="0dp"
         android:singleLine="true"
@@ -44,9 +44,9 @@
         app:layout_constraintTop_toBottomOf="@id/author" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/menuPost"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:contentDescription="@string/post_menu"
-        android:id="@+id/menuPost"
         android:layout_height="43dp"
         android:layout_width="36dp"
         app:icon="@drawable/ic_baseline_more_vert_24dp"
@@ -56,10 +56,10 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/likes"
         style="@style/OurButtons"
         android:button="@color/ic_like_selector"
         android:checkable="true"
-        android:id="@+id/likes"
         android:textColor="@color/purple_500"
         app:icon="@drawable/ic_baseline_favorite_like_24dp"
         app:iconTint="@color/colorLiked"
@@ -68,8 +68,8 @@
         tools:text="100500" />
 
     <com.google.android.material.button.MaterialButton
-        style="@style/OurButtons"
         android:id="@+id/shared"
+        style="@style/OurButtons"
         app:icon="@drawable/ic_baseline_share_24dp"
         app:iconTint="@color/colorDarkGrey"
         app:layout_constraintStart_toEndOf="@id/likes"
@@ -77,19 +77,20 @@
         tools:text="100500" />
 
     <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:id="@+id/postVideo"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:visibility="visible"
+        android:contentDescription="TODO"
         app:icon="@drawable/ic_baseline_video_file_24dp"
         app:iconTint="@color/ic_shared_tint"
         app:layout_constraintStart_toEndOf="@id/shared"
         app:layout_constraintTop_toBottomOf="@id/barrierBottom" />
 
     <com.google.android.material.button.MaterialButton
-        style="@style/OurButtons"
         android:id="@+id/overlooked"
+        style="@style/OurButtons"
         app:icon="@drawable/ic_baseline_remove_red_eye_24dp"
         app:iconTint="@color/colorDarkGrey"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,8 +112,8 @@
         app:constraint_referenced_ids="content" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:autoLink="web"
         android:id="@+id/content"
+        android:autoLink="web"
         android:layout_height="300dp"
         android:layout_width="match_parent"
         android:text="@string/content"

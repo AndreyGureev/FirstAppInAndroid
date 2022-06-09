@@ -41,9 +41,9 @@ class PostCardFragment : Fragment() {
             author.text = post.author
             published.text = post.published
             content.text = post.content
-            likes.text = AndroidUtils.counter(post.numberOfLikesToInt)
-            shared.text = AndroidUtils.counter(post.numberOfSharedToInt)
-            numberOfViews.text = AndroidUtils.counter(post.numberOfOverlookedToInt)
+            likes.text = AndroidUtils.counter(post.likes)
+            shared.text = AndroidUtils.counter(post.shares)
+            numberOfViews.text = AndroidUtils.counter(post.views)
             likes.isChecked = post.likedByMe
 
             if (post.video == "") {
@@ -56,13 +56,13 @@ class PostCardFragment : Fragment() {
         binding.likes.setOnClickListener {
             viewModel.likeById(post.id)
             val updatedPost = viewModel.searchPost(post.id)
-            binding.likes.text = updatedPost.numberOfLikesToInt.toString()
+            binding.likes.text = updatedPost.likes.toString()
         }
 
         binding.shared.setOnClickListener {
             viewModel.shareById(post.id)
             val updatedPost = viewModel.searchPost(post.id)
-            binding.shared.text = updatedPost.numberOfSharedToInt.toString()
+            binding.shared.text = updatedPost.shares.toString()
             val intent = Intent().apply {
                 action = Intent.ACTION_SEND
                 putExtra(Intent.EXTRA_TEXT, post.content)

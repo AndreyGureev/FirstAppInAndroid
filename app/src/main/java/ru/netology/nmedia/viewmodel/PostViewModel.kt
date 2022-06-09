@@ -15,9 +15,9 @@ private val empty = Post(
     published = "",
     likedByMe = false,
     video = "",
-    numberOfLikesToInt = 0,
-    numberOfSharedToInt = 0,
-    numberOfOverlookedToInt = 0
+    likes = 0,
+    shares = 0,
+    views = 0
 )
 
 class PostViewModel(application: Application) : AndroidViewModel(application) {
@@ -47,7 +47,6 @@ class PostViewModel(application: Application) : AndroidViewModel(application) {
     fun shareById(id: Long) = repository.shareById(id)
     fun overlookById(id: Long) = repository.overlookById(id)
     fun removeById(id: Long) = repository.removeById(id)
-    fun addVideoById(id: Long) = repository.addVideoById(id)
 
     fun searchPost(id: Long): Post {
         return repository.findPostById(id)

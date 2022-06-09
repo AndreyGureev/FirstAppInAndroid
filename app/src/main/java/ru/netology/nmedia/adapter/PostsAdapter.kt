@@ -46,9 +46,9 @@ class PostViewHolder(
             author.text = post.author
             content.text = post.content
             published.text = post.published
-            likes.text = AndroidUtils.counter(post.numberOfLikesToInt)
-            shared.text = AndroidUtils.counter(post.numberOfSharedToInt)
-            overlooked.text = AndroidUtils.counter(post.numberOfOverlookedToInt)
+            likes.text = AndroidUtils.counter(post.likes)
+            shared.text = AndroidUtils.counter(post.shares)
+            overlooked.text = AndroidUtils.counter(post.views)
 
             likes.isChecked = post.likedByMe
 
