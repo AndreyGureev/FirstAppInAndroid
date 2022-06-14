@@ -17,7 +17,7 @@
             android:contentDescription="@string/avatar_description"
             android:layout_height="@dimen/post_avatar_size_48dp"
             android:layout_width="@dimen/post_avatar_size_48dp"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/netology"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

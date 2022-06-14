@@ -7,12 +7,13 @@ import ru.netology.nmedia.db.AppDb
 import ru.netology.nmedia.dto.Post
 import ru.netology.nmedia.repository.PostRepository
 import ru.netology.nmedia.repository.PostRepositorySQLiteImpl
+import ru.netology.nmedia.utils.AndroidUtils
 
 private val empty = Post(
     id = 0,
     author = "",
     content = "",
-    published = "",
+    published = AndroidUtils.addLocalDataTime(),
     likedByMe = false,
     video = "",
     likes = 0,

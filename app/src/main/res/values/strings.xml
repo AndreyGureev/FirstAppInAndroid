@@ -13,7 +13,7 @@
     <string name="edit_post" translatable="false">Edit</string>
     <string name="remove_post" translatable="false">Remove</string>
     <string name="publish_text" translatable="false">Publish a post</string>
-    <string name="ok" translatable="false">OK</string>
+    <string name="OK" translatable="false">OK</string>
     <string name="cancelEditing" translatable="false">Cancel editing</string>
     <string name="add_post" translatable="false">Add Post</string>
     <string name="save_post" translatable="false">Save Post</string>
@@ -25,4 +25,11 @@
     <string name="play_video_netology" translatable="false">Play video Netology</string>
     <string name="error_url_validation">Invalid url</string>
     <string name="error_play_video_validation">Something went wrong! The video cannot be played!!!</string>
+    <string name="channel_remote_name">Notification Service</string>
+    <string name="channel_remote_description">Notifications from a remote service</string>
+    <string name="notification_user_liked">User %1$s likes %2$s\'s post</string>
+    <string name="notification_else_action">There have been changes made in %1$s the post. Let\'s look at it.</string>
+    <string name="notification_user_share">User %1$s shared the post %2$s\'s</string>
+    <string name="notification_new_post">User %1$s has created a new post</string>
+    <string name="notification_new_viewer">User %1$s viewed the post</string>
 </resources>

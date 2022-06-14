@@ -16,6 +16,7 @@ import ru.netology.nmedia.adapter.PostAdapter
 import ru.netology.nmedia.databinding.FragmentMainBinding
 import ru.netology.nmedia.dto.Post
 import ru.netology.nmedia.utils.AndroidUtils
+import ru.netology.nmedia.utils.Arguments
 import ru.netology.nmedia.viewmodel.PostViewModel
 
 class MainFragment : Fragment() {

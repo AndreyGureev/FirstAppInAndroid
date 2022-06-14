@@ -13,7 +13,7 @@
     <string name="edit_post" translatable="false">Редактировать</string>
     <string name="remove_post" translatable="false">Удалить</string>
     <string name="publish_text" translatable="false">Опубликовать пост</string>
-    <string name="ok" translatable="false">Хорошо</string>
+    <string name="OK" translatable="false">Хорошо</string>
     <string name="cancelEditing" translatable="false">Отменить редактирование</string>
     <string name="add_post" translatable="false">Добавить пост</string>
     <string name="save_post" translatable="false">Сохранить пост</string>
@@ -25,4 +25,11 @@
     <string name="play_video_netology" translatable="false">Воспроизведение видео Нетологии</string>
     <string name="error_url_validation">Недопустимый URL-адрес</string>
     <string name="error_play_video_validation">Что-то пошло не так! Видео не может быть воспроизведено!!!</string>
+    <string name="channel_remote_name">Сервис уведомлений</string>
+    <string name="channel_remote_description">Уведомления с удаленного сервиса</string>
+    <string name="notification_user_liked">Пользователю %1$s нравится %2$s\ пост</string>
+    <string name="notification_else_action">Кое-что изменилось в посту %1$s. Давайте посмотрим!</string>
+    <string name="notification_user_share">Пользователь %1$s поделился постом %2$s\</string>
+    <string name="notification_new_post">Пользователь %1$s создал новый пост</string>
+    <string name="notification_new_viewer">Пользователь %1$s просмотрел пост</string>
 </resources>

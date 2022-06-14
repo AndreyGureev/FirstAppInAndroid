@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import ru.netology.nmedia.R
-import ru.netology.nmedia.activity.Arguments.DRAFT_TEXT
-import ru.netology.nmedia.activity.Arguments.DRAFT_VIDEO_LINK
+import ru.netology.nmedia.utils.Arguments.DRAFT_TEXT
+import ru.netology.nmedia.utils.Arguments.DRAFT_VIDEO_LINK
 import ru.netology.nmedia.databinding.FragmentNewPostBinding
 import ru.netology.nmedia.utils.AndroidUtils
 import ru.netology.nmedia.viewmodel.PostViewModel
